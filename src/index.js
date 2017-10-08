@@ -124,7 +124,7 @@ class Logger {
     if (value < threshold) return
 
     const method = METHODS[level]
-    const args = [`%c [${level}]`, STYLES[level], `${message} —`, data ]
+    const args = [`%c [${level}]`, STYLES[level], `${message} `, data ]
     console[method](...args) // eslint-disable-line no-console
   }
 
