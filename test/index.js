@@ -12,16 +12,11 @@ const example = new Logger({
   level: 'debug',
 })
 
+example.info('message', { data: [{ index: 1 }, { index: 2 }] })
+example.warn('message', { data: [{ index: 1 }, { index: 2 }] })
+example.error('message', { data: [{ index: 1 }, { index: 2 }] })
 
-example.info('Websocket connected!', { port: 4000 })
-example.error('Invalid `type` argument', { argument: 'type', value: 'nuber' })
-
-// example.debug('message', { data: [{ index: 1 }, { index: 2 }] })
-// example.info('message', { data: [{ index: 1 }, { index: 2 }] })
-// example.warn('message', { data: [{ index: 1 }, { index: 2 }] })
-// example.error('message', { data: [{ index: 1 }, { index: 2 }] })
-
-// example.error(new Error('An error occured!'))
+example.error(new Error('An error occured!'))
 
 /**
  * Tests.
