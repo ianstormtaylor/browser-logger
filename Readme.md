@@ -11,7 +11,6 @@ A dead simple logger, designed to be perfect for the browser.
 - Makes your logging nice and easy to read in development.
 - Only logs errors by default in production, so user's won't see junk in the console.
 - Leverages the browser's smart, built-in `console` formatting and stack traces.
-- A perfect compliment to [`heroku-logger`](https://github.com/ianstormtaylor/heroku-logger) for the server-side.
 
 ---
 
@@ -20,7 +19,7 @@ A dead simple logger, designed to be perfect for the browser.
 Given an API which is what you'd expect...
 
 ```js
-const logger = require('browser-logger')
+import logger from 'browser-logger'
 
 logger.info('Websocket connected!', { port: 4000 })
 logger.error('Invalid `type` argument', { argument: 'type', value: 'nuber' })
@@ -51,7 +50,7 @@ That way you can just import `'browser-logger'` and not have to worry about conf
 ### API
 
 ```js
-const logger = require('browser-logger')
+import logger from 'browser-logger'
 
 logger.info('message', { key: 'value' })
 ```
@@ -74,7 +73,7 @@ If you want to completely disable logging, set `LOG_LEVEL` to `'none'`.
 #### new Logger(options)
 
 ```js
-const Logger = require('browser-logger').Logger
+import { Logger } from 'browser-logger'
 
 const logger = new Logger({
   level: String,     // Defaults to `LOG_LEVEL` if set, or `'info'`.
