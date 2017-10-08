@@ -55,7 +55,7 @@ import logger from 'browser-logger'
 logger.info('message', { key: 'value' })
 ```
 ```
-[info] message { key: 'value' }
+[info] message  { key: 'value' }
 ```
 
 The package exports the one-liner `logger` singleton as the default, which is already instanciated with sane defaults using the `NODE_ENV` environment variable and the `LOG_LEVEL` Local Storage variable.
@@ -93,8 +93,8 @@ logger.info('message', { key: 'value' })
 logger.error('error!', { code: 400 })
 ```
 ```
-[info] message key=value level=info message=message
-[error] error! code=400 level=error message=error!
+[info] message  { key: 'value' }
+[error] error!  { code: 400 }
 ```
 
 Log a `message` with `data` to the console at `level`, where level is one of:
@@ -114,7 +114,7 @@ You can also pass an `Error` object as a `message`, in which case the logger wil
 logger.log('info', 'message', { key: 'value' })
 ```
 ```
-[info] message key=value level=info message=message
+[info] message  { key: 'value' }
 ```
 
 Log a `message` with `data` to the console at `level`.
@@ -127,7 +127,7 @@ const other = logger.clone({ prefix: '[package] ' })
 other.info('message', { key: 'value' })
 ```
 ```
-[info] [package] message key=value level=info message=message
+[info] [package] message  { key: 'value' }
 ```
 
 Create a new `Logger` instance, copying the existing loggers config, but extending it with optional `options`.
