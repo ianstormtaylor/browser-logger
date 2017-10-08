@@ -26,11 +26,11 @@ logger.info('Websocket connected!', { port: 4000 })
 logger.error('Invalid `type` argument', { argument: 'type', value: 'nuber' })
 ```
 
-In development, it outputs an easy to read version...
+In development, it outputs an easy to read version, using the browser's built-in formatting...
 
 ![](./docs/screenshot.png)
 
-But in production it will only log errors by default, to not confuse users.
+And in production it will only log errors by default, to not confuse users who might open the console.
 
 That's it!
 
