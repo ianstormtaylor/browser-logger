@@ -158,5 +158,5 @@ const logger = new Logger()
  * @type {Logger}
  */
 
-export default logger
-export { Logger }
+module.exports = exports = logger
+exports.Logger = Logger

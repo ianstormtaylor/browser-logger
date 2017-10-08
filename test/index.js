@@ -1,7 +1,6 @@
 
-const pkg = require('..')
-const logger = pkg.default
-const Logger = pkg.Logger
+const logger = require('..')
+const Logger = logger.Logger
 const assert = require('assert')
 
 /**
